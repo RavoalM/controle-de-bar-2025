@@ -7,9 +7,9 @@
 
         if (enderecoAtual === atributoHref || enderecoAtual.startsWith(atributoHref + "/")) {
             link.classList.remove('nav-link', 'text-primary');
-            link.classList.add('btn', 'btn-primary', 'rounded-3');
+            link.classList.add('btn', 'btn-cobre', 'rounded-3');
         } else {
-            link.classList.remove('btn', 'btn-primary', 'rounded-3');
+            link.classList.remove('btn', 'btn-cobre', 'rounded-3');
             link.classList.add('nav-link', 'text-primary');
         }
     }

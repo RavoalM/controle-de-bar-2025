@@ -7,27 +7,27 @@
 
 <form class="d-grid d-md-flex flex-wrap align-items-end gap-2" action="/contas/faturamento" method="get">
     <div class="form-group d-grid">
-        <label for="data" class="control-label fs-6">Data:</label>
-        <input name="data" type="date" class="form-control" value="@(string.IsNullOrWhiteSpace(Context.Request.Query["data"]) ? DateTime.Today.ToString("yyyy-MM-dd") : Context.Request.Query["data"])" />
+        <label for="data" class="control-label fs-6 text-light">Data:</label>
+        <input name="data" type="date" class="form-control bg-dark text-light border-secondary" value="@(string.IsNullOrWhiteSpace(Context.Request.Query["data"]) ? DateTime.Today.ToString("yyyy-MM-dd") : Context.Request.Query["data"])" />
     </div>
 
-    <button class="btn btn-primary px-5">
+    <button class="btn btn-cobre px-5">
         <i class="bi bi-filter"></i>
         Filtrar
     </button>
 </form>
 
-<hr />
+<hr class="border border-secondary opacity-50" />
 
 @if (Model is not null)
 {
     @if (!Model.Registros.Any())
     {
-        <p>Nenhum registro foi encontrado para a data solicitada.</p>
+        <p class="text-light">Nenhum registro foi encontrado para a data solicitada.</p>
     }
     else
     {
-        <table class="table table-striped mt-3">
+        <table class="table table-striped table-dark mt-3">
             <thead>
                 <tr>
                     <th>Titular</th>
@@ -49,7 +49,7 @@
             </tbody>
         </table>
 
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end text-light mt-3">
             <span><strong>Total Diário:</strong> @Model.Total.ToString("C2")</span>
         </div>
     }

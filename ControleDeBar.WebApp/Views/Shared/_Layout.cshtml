@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" href="~/images/coquetel.png">
+
+    <!-- Bootstrap e ícones -->
     <link rel="stylesheet" href="~/lib/bootstrap-5.3.6-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.css" />
-    <link rel="stylesheet" href="~/css/app.css" />
+
+    <!-- Seu CSS personalizado deve ser o último -->
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true" />
 
     <title>@ViewBag.Titulo | Controle de Bar</title>
 </head>
+
 <body>
     <partial name="_NavbarPartial"/>
 
@@ -25,6 +30,6 @@
     <script src="~/js/ativacaoNavbar.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    @RenderSection("Scripts", required: false);
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
