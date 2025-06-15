@@ -11,7 +11,7 @@ public abstract class FormularioMesaViewModel
     public int Numero { get; set; }
 
     [Required(ErrorMessage = "O campo \"Capacidade\" é obrigatório.")]
-    [Range(1, 100, ErrorMessage = "O campo \"Capacidade\" precisa conter um valor entre 1 e 100.")]
+    [Range(1, 15, ErrorMessage = "O campo \"Capacidade\" precisa conter um valor entre 1 e 15.")]
     public int Capacidade { get; set; }
 }
 
@@ -22,7 +22,7 @@ public class CadastrarMesaViewModel : FormularioMesaViewModel
     public CadastrarMesaViewModel(int numero, int capacidade) : this()
     {
         Numero = numero;
-        Capacidade = numero;
+        Capacidade = capacidade;
     }
 }
 
@@ -36,7 +36,7 @@ public class EditarMesaViewModel : FormularioMesaViewModel
     {
         Id = id;
         Numero = numero;
-        Capacidade = numero;
+        Capacidade = capacidade;
     }
 }
 
@@ -81,7 +81,7 @@ public class DetalhesMesaViewModel
     {
         Id = id;
         Numero = numero;
-        Capacidade = numero;
+        Capacidade = capacidade;
     }
 }
 

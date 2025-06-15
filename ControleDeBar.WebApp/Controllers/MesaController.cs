@@ -49,7 +49,7 @@ public class MesaController : Controller
             {
                 ModelState.AddModelError("CadastroUnico", "Já existe uma mesa registrada com este número.");
                 break;
-            }
+            }   
         }
 
         if (!ModelState.IsValid)

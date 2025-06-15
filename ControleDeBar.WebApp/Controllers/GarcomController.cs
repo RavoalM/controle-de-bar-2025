@@ -44,12 +44,6 @@ public class GarcomController : Controller
 
         foreach (var item in registros)
         {
-            if (item.Nome.Equals(cadastrarVM.Nome))
-            {
-                ModelState.AddModelError("CadastroUnico", "Já existe um garçom registrado com este nome.");
-                break;
-            }
-
             if (item.Cpf.Equals(cadastrarVM.Cpf))
             {
                 ModelState.AddModelError("CadastroUnico", "Já existe um garçom registrado com este CPF.");
